@@ -6,28 +6,28 @@ public class prostyje {
 			System.out.println(+x + "- nie prostoje czislo");
 		} else if (x == 2) {
 			System.out.println(+x + " -  prostoje czislo");
-		}
-	else
+		} else
 
-	{
+		{
+			boolean resault = false;
 
-		for (int i = 2; i < x; i++) {
-			if (x % i == 0) {
-				System.out.println(+x + " - nie prostoje czislo");
-				return x;
-			} else {
-				System.out.println(+x + "- prostoje czislo");
-				return x;
+			for (int i = 2; i < x; i++) {
+				if (x % i == 0) {
+					resault = true;
+					break;
+
+				}
 			}
-
+			if (resault) {
+				System.out.println(+x + "sostavnoje");
+			} else {
+				System.out.println(+x + "prostoje");
+			}
 		}
-	}
-
-	return x;
-
+		return x;
 	}
 
 	public static void main(String[] args) {
-		System.out.println(prostyje(33));
+		System.out.println(prostyje(2));
 	}
 }
